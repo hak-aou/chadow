@@ -1,0 +1,38 @@
+<!--
+-Pour exécuter l'une des cibles : compile et jar :
+tappez : `ant [nom de la cible]`
+
+-Tappez seulement `ant` exécutera la cible par défaut jar.
+-->
+
+<project name="Chadow-AOUDIA-TRAN" default="jar">
+
+    <!-- ant clean : permet le nettoyage du projet
+    <target name="clean">
+        <delete includeEmptyDirs="true" dir="bin"/>
+        <mkdir dir="bin"/>
+        <delete includeEmptyDirs="true" dir="jar"/>
+    </target> -->
+
+    <!-- ant compile : permet la compilation des classes du projet -->
+    <target name="compile">
+        <mkdir dir="bin"/>
+        <javac srcdir="src" destdir="bin"/>
+    </target>
+
+    <!-- ant jar : permet la création des jars pour le client et pour le serveur -->
+    <target name="jar" depends="compile">
+        <jar destfile="jar/ClientChadow.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="fr.uge.client.ClientChadow"/>
+            </manifest>
+        </jar>
+
+        <jar destfile="jar/ServerChadow.jar" basedir="bin">
+            <manifest>
+                <attribute name="Main-Class" value="fr.uge.server.ServerChadow"/>
+            </manifest>
+        </jar>
+    </target>
+
+</project>
