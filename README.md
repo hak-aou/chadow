@@ -2,6 +2,7 @@
 
 #### *Date : 2024*
 #### *Niveau : M1 S2*
+#### *Membres : Hakim AOUDIA, Sylvain TRAN*
 
 ## Présentation
 
@@ -26,14 +27,6 @@ L’originalité du protocole est le **mode caché** : un client peut téléchar
 <p align="center">
   <img src="https://github.com/user-attachments/assets/510cb061-9e42-4268-adc0-9386c1908951" alt="Screenshot from 2025-05-25 23-12-08" width="600"/>
 </p>
-
-## Membres
-
-| Nom    | Prénom  | Email                                                                     |
-| ------ | ------- | ------------------------------------------------------------------------- |
-| Aoudia | Hakim   | [hakim.aoudia@etu.univ-eiffel.fr](mailto:hakim.aoudia@etu.univ-eiffel.fr) |
-| Tran   | Sylvain | [sylvain.tran@etu.univ-eiffel.fr](mailto:sylvain.tran@etu.univ-eiffel.fr) |
-
 
 ---
 
