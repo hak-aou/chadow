@@ -1,5 +1,8 @@
 # Projet **Chadow**
 
+#### *Date : 2024-2025*
+#### *Niveau : M2*
+
 ## Présentation
 
 **Chadow** est un protocole au dessus de TCP pour un serveur de discussion (type IRC) qui ajoute le partage de fichiers.
