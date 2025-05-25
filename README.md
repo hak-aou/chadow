@@ -14,6 +14,13 @@ L’originalité du protocole est le **mode caché** : un client peut téléchar
 
 ---
 
+## Capture d'écran
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/510cb061-9e42-4268-adc0-9386c1908951" alt="Screenshot from 2025-05-25 23-12-08" width="600"/>
+</p>
+
+---
+
 ## Fonctionnalités principales
 
 - Chat public et messages privés.
@@ -23,10 +30,6 @@ L’originalité du protocole est le **mode caché** : un client peut téléchar
 - Refus ou acceptation automatique d’un partage.
 - Plusieurs clients peuvent être lancés sur la **même machine**.
 
-## Capture d'écran
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/510cb061-9e42-4268-adc0-9386c1908951" alt="Screenshot from 2025-05-25 23-12-08" width="600"/>
-</p>
 
 ---
 
