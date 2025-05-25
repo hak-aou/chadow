@@ -1,30 +1,59 @@
+# Projet **Chadow**
 
-Les instructions pour construire les jars :
+## Présentation
 
-1) ouvrir un terminal dans le répertoire du projet
-2) tapper 'ant' ou 'ant jar' 
-=> les jars serons contruit dans un répertoire jar
+**Chadow** est un protocole au dessus de TCP pour un serveur de discussion (type IRC) qui ajoute le partage de fichiers.
+L’originalité du protocole est le **mode caché** : un client peut télécharger un fichier sans révéler son adresse IP au client qui le fournit, en passant par un ou plusieurs autres clients agissant comme **proxys**.
+
+- **Mode ouvert :** téléchargement direct depuis tous les clients possédant le fichier.  
+- **Mode caché :** téléchargement indirect en chaînant un ou plusieurs proxys (A → C → B).
+
+---
+
+## Fonctionnalités principales
+
+- Chat public et messages privés.
+- Annonce / retrait de fichiers à partager.
+- Liste des utilisateurs et des fichiers disponibles.
+- Téléchargement **ouvert** (multi-source) ou **caché** (avec proxys).
+- Refus ou acceptation automatique d’un partage.
+- Plusieurs clients peuvent être lancés sur la **même machine**.
+
+## Capture d'écran
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/510cb061-9e42-4268-adc0-9386c1908951" alt="Screenshot from 2025-05-25 23-12-08" width="600"/>
+</p>
+
+## Membres
+
+| Nom    | Prénom  | Email                                                                     |
+| ------ | ------- | ------------------------------------------------------------------------- |
+| Aoudia | Hakim   | [hakim.aoudia@etu.univ-eiffel.fr](mailto:hakim.aoudia@etu.univ-eiffel.fr) |
+| Tran   | Sylvain | [sylvain.tran@etu.univ-eiffel.fr](mailto:sylvain.tran@etu.univ-eiffel.fr) |
 
 
-Voici la liste des commandes disponibles pour utiliser les clients :
+---
 
-To send a message to all : 3 message
-To send a private message to someone : 5 login_dst message
+## Construction du projet
 
-To share files : 8 list_files_share
-To unshare files : 9 list_files_unshare
-To change the sharing status of files to 'Always Accept' : 50 list_file
-To change the sharing status of files to 'Always Refuse' : 51 list_file
+> **Prérequis :** JDK 21+ et **Ant**.
 
-To request the list of all logins on the server : 10
-To request the list of all files available for download : 12
-To request the list of files you shared : 28
+```bash
+# Dans la racine du projet
+ant        # ou ant jar
+```
+Le script démarre 1 serveur et 3 clients.
 
-To download a file in open mode : 14 filename_you_want_to_download
-To download a file in hidden mode : 19 filename_you_want_to_download
-
-
-Il y a un fichier run.sh qui permet de lancer directement le serveur et 3 clients. Pour lancer le fichier il faut utiliser la commande suivante :
-sh run.sh
-ou 
-./run.sh
+| Action                  | Commande                    |
+| ----------------------- | --------------------------- |
+| Message global          | `3  <message>`              |
+| Message privé           | `5  <login_dest> <message>` |
+| Partager                | `8  <file1> [file2 …]`      |
+| Retirer                 | `9  <file1> [file2 …]`      |
+| Toujours accepter       | `50 <file1>`                |
+| Toujours refuser        | `51 <file1>`                |
+| Liste utilisateurs      | `10`                        |
+| Liste fichiers dispo    | `12`                        |
+| Liste fichiers partagés | `28`                        |
+| Télécharger (ouvert)    | `14 <fichier>`              |
+| Télécharger (caché)     | `19 <fichier>`              |
