@@ -1,7 +1,7 @@
 # Projet **Chadow**
 
-#### *Date : 2024-2025*
-#### *Niveau : M2*
+#### *Date : 2024*
+#### *Niveau : M1 S2*
 
 ## Présentation
 
